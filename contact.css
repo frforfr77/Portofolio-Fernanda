@@ -1,0 +1,80 @@
+/* ====== Reset dasar ====== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background: #f9f9f9;
+  color: #222;
+  height: 100vh; /* tinggi penuh layar */
+  display: flex;
+  justify-content: center; /* tengah horizontal */
+  align-items: center;     /* tengah vertikal */
+}
+
+/* ====== Kontainer ikon ====== */
+.social-links {
+  display: flex;
+  justify-content: center;
+  align-items: center; /* ⬅️ ini kunci supaya ikon sejajar vertikal */
+  gap: 40px;
+}
+
+
+/* ====== Gaya ikon ====== */
+.social-links a {
+  color: #333;
+  text-decoration: none;
+  font-size: 5rem; /* ikon besar */
+  line-height: 1; /* hindari jarak vertikal ekstra */
+  display: flex;
+  align-items: center; /* pastikan SVG di tengah */
+  justify-content: center;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+
+.social-links a:hover {
+  color: #0077ff;
+  transform: scale(1.15);
+}
+
+/* ====== Dark Mode ====== */
+@media (prefers-color-scheme: dark) {
+  body {
+    background: #1a1a1a;
+    color: #f9f9f9;
+  }
+
+  .social-links a {
+    color: #ddd;
+  }
+
+  .social-links a:hover {
+    color: #66aaff;
+  }
+}
+
+.span-text {
+  font-size: 1.2rem;
+  margin-left: 8px; /* jarak antara ikon dan teks */
+  font-weight: 500;
+}
+
+.social-links a:hover .span-text {
+  color: #0077ff;
+}
+
+/* ====== Responsif ====== */
+@media (max-width: 600px) {
+  .social-links {
+    gap: 25px;
+  }
+
+  .social-links a {
+    font-size: 2rem;
+  }
+}
